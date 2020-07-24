@@ -19,7 +19,7 @@ namespace JuliusSweetland.OptiKey.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Resources {
@@ -1285,6 +1285,15 @@ namespace JuliusSweetland.OptiKey.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Dock position.
+        /// </summary>
+        public static string DOCK_POSITION_LABEL {
+            get {
+                return ResourceManager.GetString("DOCK_POSITION_LABEL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to DOWN ARROW.
         /// </summary>
         public static string DOWN_ARROW {
@@ -1427,6 +1436,15 @@ namespace JuliusSweetland.OptiKey.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Use a different Yandex Translation API key?.
+        /// </summary>
+        public static string ENABLE_OVERRIDE_TRANSLATION_API_KEY_LABEL {
+            get {
+                return ResourceManager.GetString("ENABLE_OVERRIDE_TRANSLATION_API_KEY_LABEL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enable plugins.
         /// </summary>
         public static string ENABLE_PLUGINS {
@@ -1441,6 +1459,15 @@ namespace JuliusSweetland.OptiKey.Properties {
         public static string ENABLE_QUIT_KEYS_LABEL {
             get {
                 return ResourceManager.GetString("ENABLE_QUIT_KEYS_LABEL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enable translation key? (translation auto copied).
+        /// </summary>
+        public static string ENABLE_TRANSLATION_KEY_LABEL {
+            get {
+                return ResourceManager.GetString("ENABLE_TRANSLATION_KEY_LABEL", resourceCulture);
             }
         }
         
@@ -1531,6 +1558,15 @@ namespace JuliusSweetland.OptiKey.Properties {
         public static string ENTRY_ADDED_TO_DICTIONARY {
             get {
                 return ResourceManager.GetString("ENTRY_ADDED_TO_DICTIONARY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An error has occured during the translation of text.
+        /// </summary>
+        public static string ERROR_DURING_TRANSLATION {
+            get {
+                return ResourceManager.GetString("ERROR_DURING_TRANSLATION", resourceCulture);
             }
         }
         
@@ -1627,7 +1663,8 @@ namespace JuliusSweetland.OptiKey.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to EXPAND
-        ///DOWN &amp; LEFT.
+        ///DOWN
+        ///&amp; LEFT.
         /// </summary>
         public static string EXPAND_DOWN_AND_LEFT_SPLIT_WITH_NEWLINE {
             get {
@@ -1646,7 +1683,8 @@ namespace JuliusSweetland.OptiKey.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to EXPAND
-        ///DOWN &amp; RIGHT.
+        ///DOWN
+        ///&amp; RIGHT.
         /// </summary>
         public static string EXPAND_DOWN_AND_RIGHT_SPLIT_WITH_NEWLINE {
             get {
@@ -1722,7 +1760,8 @@ namespace JuliusSweetland.OptiKey.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to EXPAND
-        ///UP &amp; LEFT.
+        ///UP &amp;
+        ///LEFT.
         /// </summary>
         public static string EXPAND_UP_AND_LEFT_SPLIT_WITH_NEWLINE {
             get {
@@ -1741,7 +1780,8 @@ namespace JuliusSweetland.OptiKey.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to EXPAND
-        ///UP &amp; RIGHT.
+        ///UP &amp;
+        ///RIGHT.
         /// </summary>
         public static string EXPAND_UP_AND_RIGHT_SPLIT_WITH_NEWLINE {
             get {
@@ -2011,6 +2051,15 @@ namespace JuliusSweetland.OptiKey.Properties {
         public static string FIXATIONS_DWELL {
             get {
                 return ResourceManager.GetString("FIXATIONS_DWELL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Floating position (left, top, width, height).
+        /// </summary>
+        public static string FLOATING_POSITION_LABEL {
+            get {
+                return ResourceManager.GetString("FLOATING_POSITION_LABEL", resourceCulture);
             }
         }
         
@@ -2498,7 +2547,8 @@ namespace JuliusSweetland.OptiKey.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to JUMP
-        ///DOWN &amp; LEFT.
+        ///DOWN
+        ///&amp; LEFT.
         /// </summary>
         public static string JUMP_DOWN_AND_LEFT_SPLIT_WITH_NEWLINE {
             get {
@@ -2517,7 +2567,8 @@ namespace JuliusSweetland.OptiKey.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to JUMP
-        ///DOWN &amp; RIGHT.
+        ///DOWN
+        ///&amp; RIGHT.
         /// </summary>
         public static string JUMP_DOWN_AND_RIGHT_SPLIT_WITH_NEWLINE {
             get {
@@ -2593,7 +2644,8 @@ namespace JuliusSweetland.OptiKey.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to JUMP
-        ///UP &amp; LEFT.
+        ///UP &amp;
+        ///LEFT.
         /// </summary>
         public static string JUMP_UP_AND_LEFT_SPLIT_WITH_NEWLINE {
             get {
@@ -2612,7 +2664,8 @@ namespace JuliusSweetland.OptiKey.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to JUMP
-        ///UP &amp; RIGHT.
+        ///UP &amp;
+        ///RIGHT.
         /// </summary>
         public static string JUMP_UP_AND_RIGHT_SPLIT_WITH_NEWLINE {
             get {
@@ -4071,7 +4124,9 @@ namespace JuliusSweetland.OptiKey.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Move by {0} pixel:|Move by {0} pixels:.
+        ///   Looks up a localized string similar to Move by
+        ///{0} pixel:|Move by 
+        ///{0} pixels:.
         /// </summary>
         public static string MOVE_BY {
             get {
@@ -4099,7 +4154,8 @@ namespace JuliusSweetland.OptiKey.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to MOVE
-        ///DOWN &amp; LEFT.
+        ///DOWN
+        ///&amp; LEFT.
         /// </summary>
         public static string MOVE_DOWN_AND_LEFT_SPLIT_WITH_NEWLINE {
             get {
@@ -4118,7 +4174,8 @@ namespace JuliusSweetland.OptiKey.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to MOVE
-        ///DOWN &amp; RIGHT.
+        ///DOWN
+        ///&amp; RIGHT.
         /// </summary>
         public static string MOVE_DOWN_AND_RIGHT_SPLIT_WITH_NEWLINE {
             get {
@@ -4213,7 +4270,8 @@ namespace JuliusSweetland.OptiKey.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to MOVE
-        ///UP &amp; LEFT.
+        ///UP &amp;
+        ///LEFT.
         /// </summary>
         public static string MOVE_UP_AND_LEFT_SPLIT_WITH_NEWLINE {
             get {
@@ -4232,7 +4290,8 @@ namespace JuliusSweetland.OptiKey.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to MOVE
-        ///UP &amp; RIGHT.
+        ///UP &amp;
+        ///RIGHT.
         /// </summary>
         public static string MOVE_UP_AND_RIGHT_SPLIT_WITH_NEWLINE {
             get {
@@ -4567,6 +4626,15 @@ namespace JuliusSweetland.OptiKey.Properties {
         public static string OTHER {
             get {
                 return ResourceManager.GetString("OTHER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to API Key:.
+        /// </summary>
+        public static string OVERRIDDEN_TRANSLATION_API_KEY_LABEL {
+            get {
+                return ResourceManager.GetString("OVERRIDDEN_TRANSLATION_API_KEY_LABEL", resourceCulture);
             }
         }
         
@@ -5255,7 +5323,9 @@ namespace JuliusSweetland.OptiKey.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Scroll by {0} click:|Scroll by {0} clicks:.
+        ///   Looks up a localized string similar to Scroll by 
+        ///{0} click:|Scroll by 
+        ///{0} clicks:.
         /// </summary>
         public static string SCROLL_BY {
             get {
@@ -5461,7 +5531,8 @@ namespace JuliusSweetland.OptiKey.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to SHRINK
-        ///DOWN &amp; LEFT.
+        ///DOWN
+        ///&amp; LEFT.
         /// </summary>
         public static string SHRINK_DOWN_AND_LEFT_SPLIT_WITH_NEWLINE {
             get {
@@ -5480,7 +5551,8 @@ namespace JuliusSweetland.OptiKey.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to SHRINK
-        ///DOWN &amp; RIGHT.
+        ///DOWN
+        ///&amp; RIGHT.
         /// </summary>
         public static string SHRINK_DOWN_AND_RIGHT_SPLIT_WITH_NEWLINE {
             get {
@@ -5565,7 +5637,8 @@ namespace JuliusSweetland.OptiKey.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to SHRINK
-        ///UP &amp; LEFT.
+        ///UP &amp;
+        ///LEFT.
         /// </summary>
         public static string SHRINK_UP_AND_LEFT_SPLIT_WITH_NEWLINE {
             get {
@@ -5584,7 +5657,8 @@ namespace JuliusSweetland.OptiKey.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to SHRINK
-        ///UP &amp; RIGHT.
+        ///UP &amp;
+        ///RIGHT.
         /// </summary>
         public static string SHRINK_UP_AND_RIGHT_SPLIT_WITH_NEWLINE {
             get {
@@ -6027,6 +6101,15 @@ namespace JuliusSweetland.OptiKey.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Tobii Eye Tracker 5.
+        /// </summary>
+        public static string TOBII_EYE_TRACKER_5 {
+            get {
+                return ResourceManager.GetString("TOBII_EYE_TRACKER_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Tobii EyeX.
         /// </summary>
         public static string TOBII_EYEX {
@@ -6072,7 +6155,7 @@ namespace JuliusSweetland.OptiKey.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This option will work with any Tobii Gaming eye tracker (4C, EyeX, Alienware, Steelseries, etc).
+        ///   Looks up a localized string similar to This option will work with any Tobii Gaming eye tracker (5, 4C, EyeX, Alienware, Steelseries, etc).
         /// </summary>
         public static string TOBII_EYEX_INFO {
             get {
@@ -6176,6 +6259,33 @@ namespace JuliusSweetland.OptiKey.Properties {
         public static string TONE_SOUND_4 {
             get {
                 return ResourceManager.GetString("TONE_SOUND_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Top.
+        /// </summary>
+        public static string TOP {
+            get {
+                return ResourceManager.GetString("TOP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Translate.
+        /// </summary>
+        public static string TRANSLATE {
+            get {
+                return ResourceManager.GetString("TRANSLATE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Translation Target Language:.
+        /// </summary>
+        public static string TRANSLATION_TARGET_LANGUAGE_LABEL {
+            get {
+                return ResourceManager.GetString("TRANSLATION_TARGET_LANGUAGE_LABEL", resourceCulture);
             }
         }
         

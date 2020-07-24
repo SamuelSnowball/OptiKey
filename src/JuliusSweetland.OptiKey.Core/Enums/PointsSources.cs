@@ -1,4 +1,4 @@
-// Copyright (c) 2019 OPTIKEY LTD (UK company number 11854839) - All Rights Reserved
+// Copyright (c) 2020 OPTIKEY LTD (UK company number 11854839) - All Rights Reserved
 using JuliusSweetland.OptiKey.Properties;
 namespace JuliusSweetland.OptiKey.Enums
 {
@@ -11,6 +11,7 @@ namespace JuliusSweetland.OptiKey.Enums
         SteelseriesSentry,
         TheEyeTribe,
         TobiiEyeTracker4C,
+        TobiiEyeTracker5,
         TobiiEyeX,
         TobiiRex,
         TobiiPcEyeGo,
@@ -34,6 +35,7 @@ namespace JuliusSweetland.OptiKey.Enums
                 case PointsSources.SteelseriesSentry: return Resources.STEELSERIES_SENTRY;
                 case PointsSources.TheEyeTribe: return Resources.THE_EYE_TRIBE;
                 case PointsSources.TobiiEyeTracker4C: return Resources.TOBII_EYE_TRACKER_4C;
+                case PointsSources.TobiiEyeTracker5: return Resources.TOBII_EYE_TRACKER_5;
                 case PointsSources.TobiiEyeX: return Resources.TOBII_EYEX;
                 case PointsSources.TobiiRex: return Resources.TOBII_REX;
                 case PointsSources.TobiiPcEyeGo: return Resources.TOBII_PCEYE_GO;
@@ -55,9 +57,10 @@ namespace JuliusSweetland.OptiKey.Enums
                 case PointsSources.GazeTracker: return Resources.GAZE_TRACKER_INFO;
                 case PointsSources.IrisbondDuo: return Resources.IRISBOND_DUO_INFO;
                 case PointsSources.MousePosition: return Resources.MOUSE_POSITION_INFO;
-                case PointsSources.SteelseriesSentry: return "";
+                case PointsSources.SteelseriesSentry: return Resources.TOBII_EYEX_INFO;
                 case PointsSources.TheEyeTribe: return "";
-                case PointsSources.TobiiEyeTracker4C: return "";
+                case PointsSources.TobiiEyeTracker4C: return Resources.TOBII_EYEX_INFO;
+                case PointsSources.TobiiEyeTracker5: return Resources.TOBII_EYEX_INFO;
                 case PointsSources.TobiiEyeX: return Resources.TOBII_EYEX_INFO;
                 case PointsSources.TobiiRex: return Resources.TOBII_ASSISTIVE_INFO;
                 case PointsSources.TobiiPcEyeGo: return Resources.TOBII_ASSISTIVE_INFO;

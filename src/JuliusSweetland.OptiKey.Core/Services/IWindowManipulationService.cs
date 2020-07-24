@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2019 OPTIKEY LTD (UK company number 11854839) - All Rights Reserved
+﻿// Copyright (c) 2020 OPTIKEY LTD (UK company number 11854839) - All Rights Reserved
 using System;
 using System.Windows;
 using JuliusSweetland.OptiKey.Enums;
@@ -13,13 +13,16 @@ namespace JuliusSweetland.OptiKey.Services
         Rect WindowBounds { get; }
         WindowStates WindowState { get; }
 
+        void ChangeState(WindowStates state, DockEdges dockPosition);
         void Expand(ExpandToDirections direction, double amountInPx);
         double GetOpacity();
+        bool GetPersistedState();
         void Hide();
         void IncrementOrDecrementOpacity(bool increment);
         void Maximise();
         void Minimise();
         void Move(MoveToDirections direction, double? amountInPx);
+        void PersistSizeAndPosition();
         void ResizeDockToCollapsed();
         void ResizeDockToFull();
         void Restore();
@@ -27,6 +30,8 @@ namespace JuliusSweetland.OptiKey.Services
         void SetOpacity(double opacity);
         void Shrink(ShrinkFromDirections direction, double amountInPx);
         void OverridePersistedState(bool inPersistNewState, string inWindowState, string inPosition, string inDockSize, string inWidth, string inHeight, string inHorizontalOffset, string inVerticalOffset);
-        void RestorePersistedState();
+        void RestorePersistedState(bool saveState);
+        void DisableResize();
+        void SetResizeState();
     }
 }

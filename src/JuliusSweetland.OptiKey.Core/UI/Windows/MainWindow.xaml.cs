@@ -1,7 +1,7 @@
-﻿// Copyright (c) 2019 OPTIKEY LTD (UK company number 11854839) - All Rights Reserved
+﻿// Copyright (c) 2020 OPTIKEY LTD (UK company number 11854839) - All Rights Reserved
 using System;
+using System.Collections.Generic;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using JuliusSweetland.OptiKey.Enums;
@@ -46,6 +46,11 @@ namespace JuliusSweetland.OptiKey.UI.Windows
         {
             InitializeComponent();
 
+            if (Settings.Default.MainWindowState == WindowStates.Floating ||
+                Settings.Default.MainWindowState == WindowStates.Docked)
+            {
+                this.ResizeMode = ResizeMode.CanResizeWithGrip;
+            }
             this.audioService = audioService;
             this.dictionaryService = dictionaryService;
             this.inputService = inputService;
@@ -89,6 +94,9 @@ namespace JuliusSweetland.OptiKey.UI.Windows
                 Key = Key.Enter
             });
 
+            // Enable mouse drag on keyboard
+            MainView.KeyboardHost.MouseDown += OnMouseDown;
+
             Title = string.Format(Properties.Resources.WINDOW_TITLE, DiagnosticInfo.AssemblyVersion);
 
             //Set the window size to 0x0 as this prevents a flicker where OptiKey would be displayed in the default position and then repositioned
@@ -101,6 +109,33 @@ namespace JuliusSweetland.OptiKey.UI.Windows
                 Log.Info("Main window closing event detected. In some circumstances, such as closing OptiKey from the taskbar when a background thread is running, OptiKey will not close and instead become a background process. Forcing a full shutdown.");
                 Application.Current.Shutdown();
             };
+        }
+
+        public IList<Tuple<KeyValue, KeyValue>> KeyFamily { get { return keyStateService.KeyFamily; } }
+        public IDictionary<string, List<KeyValue>> KeyValueByGroup { get { return keyStateService.KeyValueByGroup; } }
+        public IDictionary<KeyValue, TimeSpanOverrides> OverrideTimesByKey  { get { return inputService.OverrideTimesByKey; } }
+
+        void OnMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            // Don't take focus away from any existing toast notifications
+            if (MainView.ToastNotificationPopup.IsOpen)
+            {
+                return;
+            }
+
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                // This prevents win7 aerosnap, which otherwise might snap to edges and expand unexpectedly
+                ResizeMode origResizeMode = this.ResizeMode;
+                this.ResizeMode = System.Windows.ResizeMode.NoResize;
+                this.UpdateLayout();
+                
+                DragMove();
+                
+                // Restore original resize mode 
+                this.ResizeMode = origResizeMode;
+                this.UpdateLayout();
+            }
         }
 
         public IWindowManipulationService WindowManipulationService { get; set; }
@@ -214,6 +249,7 @@ namespace JuliusSweetland.OptiKey.UI.Windows
         {
             if (MessageBox.Show(Properties.Resources.QUIT_MESSAGE, Properties.Resources.QUIT, MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
+                Settings.Default.CleanShutdown = true;
                 Application.Current.Shutdown();
             }
         }
