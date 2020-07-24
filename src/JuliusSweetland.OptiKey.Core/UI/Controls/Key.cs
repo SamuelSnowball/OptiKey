@@ -99,7 +99,12 @@ namespace JuliusSweetland.OptiKey.UI.Controls
             {
                 var keyHighlightedSubscription = keyStateService.KeyHighlightStates[Value]
                     .OnPropertyChanges(ksp => ksp.Value)
-                    .Subscribe(value => IsHighlighted = value);
+                    .Subscribe(value => {
+                        //if (!Settings.Default.EnablePasswordKey)
+                        //{
+                            IsHighlighted = value;
+                        //}                        
+                    });
                 onUnloaded.Add(keyHighlightedSubscription);
             }
             IsHighlighted = Value != null && keyStateService.KeyHighlightStates[Value].Value;

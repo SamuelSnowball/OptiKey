@@ -6,6 +6,8 @@ using System.Windows.Media;
 using System.Windows.Shapes;
 using JuliusSweetland.OptiKey.Enums;
 using JuliusSweetland.OptiKey.Properties;
+using JuliusSweetland.OptiKey.UI.Utilities;
+using JuliusSweetland.OptiKey.UI.ViewModels;
 
 namespace JuliusSweetland.OptiKey.UI.Controls
 {
@@ -13,6 +15,14 @@ namespace JuliusSweetland.OptiKey.UI.Controls
     {
         public ProgressIndicator()
         {
+            var keyboardHost = VisualAndLogicalTreeHelper.FindVisualParent<KeyboardHost>(this);
+            if (keyboardHost != null) {
+                var mainViewModel = keyboardHost.DataContext as MainViewModel;
+                var keyStateService = mainViewModel.KeyStateService;
+                int x = 5;
+            }
+
+
             SizeChanged += (sender, args) => Render();
         }
 
