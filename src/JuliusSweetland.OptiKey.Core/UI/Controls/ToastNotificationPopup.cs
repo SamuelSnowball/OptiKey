@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2019 OPTIKEY LTD (UK company number 11854839) - All Rights Reserved
+﻿// Copyright (c) 2020 OPTIKEY LTD (UK company number 11854839) - All Rights Reserved
 using System;
 using System.Linq;
 using System.Windows;
@@ -52,6 +52,8 @@ namespace JuliusSweetland.OptiKey.UI.Controls
                     RaiseNotificationChain();
                 }
             };
+
+            Loaded -= OnLoaded;
         }
 
         // Consumer, pick up a message and display; when done, pick up the next one

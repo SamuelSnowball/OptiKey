@@ -1,4 +1,4 @@
-// Copyright (c) 2019 OPTIKEY LTD (UK company number 11854839) - All Rights Reserved
+// Copyright (c) 2020 OPTIKEY LTD (UK company number 11854839) - All Rights Reserved
 
 using System.Linq;
 using JuliusSweetland.OptiKey.Properties;
@@ -213,6 +213,7 @@ namespace JuliusSweetland.OptiKey.UI.ViewModels
                             Settings.Default.Save();
                             try
                             {
+                                Settings.Default.CleanShutdown = true;
                                 OptiKeyApp.RestartApp();
                             }
                             catch { } //Swallow any exceptions (e.g. DispatcherExceptions) - we're shutting down so it doesn't matter.

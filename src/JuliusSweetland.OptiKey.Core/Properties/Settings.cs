@@ -1,5 +1,6 @@
-﻿// Copyright (c) 2019 OPTIKEY LTD (UK company number 11854839) - All Rights Reserved
+﻿// Copyright (c) 2020 OPTIKEY LTD (UK company number 11854839) - All Rights Reserved
 
+using JuliusSweetland.OptiKey.Enums;
 using log4net;
 
 namespace JuliusSweetland.OptiKey.Properties {
@@ -7,6 +8,9 @@ namespace JuliusSweetland.OptiKey.Properties {
     public abstract class Settings : global::System.Configuration.ApplicationSettingsBase {
 
         private static readonly ILog Log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
+        // Derived classes must specify what app they are
+        public abstract AppType GetApp();
 
         private static Settings defaultInstance;
         
@@ -1112,7 +1116,7 @@ namespace JuliusSweetland.OptiKey.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Docked")]
         [global::System.Configuration.SettingsManageabilityAttribute(global::System.Configuration.SettingsManageability.Roaming)]
-        public global::JuliusSweetland.OptiKey.Enums.WindowStates MainWindowState {
+        public virtual global::JuliusSweetland.OptiKey.Enums.WindowStates MainWindowState {
             get {
                 return ((global::JuliusSweetland.OptiKey.Enums.WindowStates)(this["MainWindowState"]));
             }
@@ -1138,7 +1142,7 @@ namespace JuliusSweetland.OptiKey.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Docked")]
         [global::System.Configuration.SettingsManageabilityAttribute(global::System.Configuration.SettingsManageability.Roaming)]
-        public global::JuliusSweetland.OptiKey.Enums.WindowStates MainWindowPreviousState {
+        public virtual global::JuliusSweetland.OptiKey.Enums.WindowStates MainWindowPreviousState {
             get {
                 return ((global::JuliusSweetland.OptiKey.Enums.WindowStates)(this["MainWindowPreviousState"]));
             }
@@ -2633,7 +2637,71 @@ namespace JuliusSweetland.OptiKey.Properties {
                 this["EnableCopyAllScratchpadKey"] = value;
             }
         }
-        
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [global::System.Configuration.SettingsManageabilityAttribute(global::System.Configuration.SettingsManageability.Roaming)]
+        public virtual bool EnableTranslationKey
+        {
+            get
+            {
+                return ((bool)(this["EnableTranslationKey"]));
+            }
+            set
+            {
+                this["EnableTranslationKey"] = value;
+            }
+        }    
+            
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("en")]
+        [global::System.Configuration.SettingsManageabilityAttribute(global::System.Configuration.SettingsManageability.Roaming)]
+        public virtual string TranslationTargetLanguage
+        {
+            get
+            {
+                return (string)(this["TranslationTargetLanguage"]);
+            }
+            set
+            {
+                this["TranslationTargetLanguage"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [global::System.Configuration.SettingsManageabilityAttribute(global::System.Configuration.SettingsManageability.Roaming)]
+        public virtual bool EnableOverrideTranslationApiKey
+        {
+            get
+            {
+                return ((bool)(this["EnableOverrideTranslationApiKey"]));
+            }
+            set
+            {
+                this["EnableOverrideTranslationApiKey"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.SettingsManageabilityAttribute(global::System.Configuration.SettingsManageability.Roaming)]
+        public virtual string OverriddenTranslationApiKey
+        {
+            get
+            {
+                return ((string)(this["OverriddenTranslationApiKey"]));
+            }
+            set
+            {
+                this["OverriddenTranslationApiKey"] = value;
+            }
+        }
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
@@ -2705,6 +2773,37 @@ namespace JuliusSweetland.OptiKey.Properties {
             }
         }
 
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("false")]
+        [global::System.Configuration.SettingsManageabilityAttribute(global::System.Configuration.SettingsManageability.Roaming)]
+        public virtual bool CleanShutdown
+        {
+            get
+            {
+                return ((bool)(this["CleanShutdown"]));
+            }
+            set
+            {
+                this["CleanShutdown"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [global::System.Configuration.SettingsManageabilityAttribute(global::System.Configuration.SettingsManageability.Roaming)]
+        public virtual bool AttemptRestartUponCrash
+        {
+            get
+            {
+                return ((bool)(this["AttemptRestartUponCrash"]));
+            }
+            set
+            {
+                this["AttemptRestartUponCrash"] = value;
+            }
+        }
 
         public bool IsOverridden(string propName)
         {

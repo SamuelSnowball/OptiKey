@@ -397,11 +397,13 @@ DOCK</value>
   </data>
   <data name="EXPAND_DOWN_AND_LEFT_SPLIT_WITH_NEWLINE" xml:space="preserve">
     <value>EXPAND
-DOWN &amp; LEFT</value>
+DOWN
+&amp; LEFT</value>
   </data>
   <data name="EXPAND_DOWN_AND_RIGHT_SPLIT_WITH_NEWLINE" xml:space="preserve">
     <value>EXPAND
-DOWN &amp; RIGHT</value>
+DOWN
+&amp; RIGHT</value>
   </data>
   <data name="EXPAND_DOWN_SPLIT_WITH_NEWLINE" xml:space="preserve">
     <value>EXPAND
@@ -417,11 +419,13 @@ RIGHT</value>
   </data>
   <data name="EXPAND_UP_AND_LEFT_SPLIT_WITH_NEWLINE" xml:space="preserve">
     <value>EXPAND
-UP &amp; LEFT</value>
+UP &amp;
+LEFT</value>
   </data>
   <data name="EXPAND_UP_AND_RIGHT_SPLIT_WITH_NEWLINE" xml:space="preserve">
     <value>EXPAND
-UP &amp; RIGHT</value>
+UP &amp;
+RIGHT</value>
   </data>
   <data name="EXPAND_UP_SPLIT_WITH_NEWLINE" xml:space="preserve">
     <value>EXPAND
@@ -493,11 +497,13 @@ OPACITY</value>
   </data>
   <data name="JUMP_DOWN_AND_LEFT_SPLIT_WITH_NEWLINE" xml:space="preserve">
     <value>JUMP
-DOWN &amp; LEFT</value>
+DOWN
+&amp; LEFT</value>
   </data>
   <data name="JUMP_DOWN_AND_RIGHT_SPLIT_WITH_NEWLINE" xml:space="preserve">
     <value>JUMP
-DOWN &amp; RIGHT</value>
+DOWN
+&amp; RIGHT</value>
   </data>
   <data name="JUMP_DOWN_SPLIT_WITH_NEWLINE" xml:space="preserve">
     <value>JUMP
@@ -513,11 +519,13 @@ RIGHT</value>
   </data>
   <data name="JUMP_UP_AND_LEFT_SPLIT_WITH_NEWLINE" xml:space="preserve">
     <value>JUMP
-UP &amp; LEFT</value>
+UP &amp;
+LEFT</value>
   </data>
   <data name="JUMP_UP_AND_RIGHT_SPLIT_WITH_NEWLINE" xml:space="preserve">
     <value>JUMP
-UP &amp; RIGHT</value>
+UP &amp;
+RIGHT</value>
   </data>
   <data name="JUMP_UP_SPLIT_WITH_NEWLINE" xml:space="preserve">
     <value>JUMP
@@ -738,15 +746,19 @@ DOWN/UP</value>
     <value>MOVE</value>
   </data>
   <data name="MOVE_BY" xml:space="preserve">
-    <value>Move by {0} pixel:|Move by {0} pixels:</value>
+    <value>Move by
+{0} pixel:|Move by 
+{0} pixels:</value>
   </data>
   <data name="MOVE_DOWN_AND_LEFT_SPLIT_WITH_NEWLINE" xml:space="preserve">
     <value>MOVE
-DOWN &amp; LEFT</value>
+DOWN
+&amp; LEFT</value>
   </data>
   <data name="MOVE_DOWN_AND_RIGHT_SPLIT_WITH_NEWLINE" xml:space="preserve">
     <value>MOVE
-DOWN &amp; RIGHT</value>
+DOWN
+&amp; RIGHT</value>
   </data>
   <data name="MOVE_DOWN_SPLIT_WITH_NEWLINE" xml:space="preserve">
     <value>MOVE
@@ -766,11 +778,13 @@ TO</value>
   </data>
   <data name="MOVE_UP_AND_LEFT_SPLIT_WITH_NEWLINE" xml:space="preserve">
     <value>MOVE
-UP &amp; LEFT</value>
+UP &amp;
+LEFT</value>
   </data>
   <data name="MOVE_UP_AND_RIGHT_SPLIT_WITH_NEWLINE" xml:space="preserve">
     <value>MOVE
-UP &amp; RIGHT</value>
+UP &amp;
+RIGHT</value>
   </data>
   <data name="MOVE_UP_SPLIT_WITH_NEWLINE" xml:space="preserve">
     <value>MOVE
@@ -984,7 +998,9 @@ DOWN/UP</value>
 LK</value>
   </data>
   <data name="SCROLL_BY" xml:space="preserve">
-    <value>Scroll by {0} click:|Scroll by {0} clicks:</value>
+    <value>Scroll by 
+{0} click:|Scroll by 
+{0} clicks:</value>
   </data>
   <data name="SCROLL_DOWN_SPLIT_WITH_NEWLINE" xml:space="preserve">
     <value>SCROLL
@@ -1025,11 +1041,13 @@ UP</value>
   </data>
   <data name="SHRINK_DOWN_AND_LEFT_SPLIT_WITH_NEWLINE" xml:space="preserve">
     <value>SHRINK
-DOWN &amp; LEFT</value>
+DOWN
+&amp; LEFT</value>
   </data>
   <data name="SHRINK_DOWN_AND_RIGHT_SPLIT_WITH_NEWLINE" xml:space="preserve">
     <value>SHRINK
-DOWN &amp; RIGHT</value>
+DOWN
+&amp; RIGHT</value>
   </data>
   <data name="SHRINK_DOWN_SPLIT_WITH_NEWLINE" xml:space="preserve">
     <value>SHRINK
@@ -1048,11 +1066,13 @@ RIGHT</value>
   </data>
   <data name="SHRINK_UP_AND_LEFT_SPLIT_WITH_NEWLINE" xml:space="preserve">
     <value>SHRINK
-UP &amp; LEFT</value>
+UP &amp;
+LEFT</value>
   </data>
   <data name="SHRINK_UP_AND_RIGHT_SPLIT_WITH_NEWLINE" xml:space="preserve">
     <value>SHRINK
-UP &amp; RIGHT</value>
+UP &amp;
+RIGHT</value>
   </data>
   <data name="SHRINK_UP_SPLIT_WITH_NEWLINE" xml:space="preserve">
     <value>SHRINK
@@ -2433,7 +2453,7 @@ Magyar
     <value>To use Optikey with an assistive eye tracker, you either need the new version of Windows Control, or the Tobii Eye Tracking engine. If you need to use the old version of the Tobii Windows control application (including Tobii Gaze Interaction settings), then you will need to control Optikey using mouse position instead.</value>
   </data>
   <data name="TOBII_EYEX_INFO" xml:space="preserve">
-    <value>This option will work with any Tobii Gaming eye tracker (4C, EyeX, Alienware, Steelseries, etc)</value>
+    <value>This option will work with any Tobii Gaming eye tracker (5, 4C, EyeX, Alienware, Steelseries, etc)</value>
   </data>
   <data name="VI_MYGAZE_INFO" xml:space="preserve">
     <value>The Visual Interaction myGaze is only supported if you've already installed the myGaze client drivers, which are no longer available for download. If you don't have these drivers installed, you should select use 'mouse position' instead, and use Optikey in combination with the myGaze EyeMousePlay application to move the cursor.</value>
@@ -2443,5 +2463,35 @@ Magyar
   </data>
   <data name="ALLOW_MULTIPLE_INSTANCES" xml:space="preserve">
     <value>Allow multiple instances of this Optikey app to run simultaneously</value>
+  </data>
+  <data name="TOP" xml:space="preserve">
+    <value>Top</value>
+  </data>
+  <data name="DOCK_POSITION_LABEL" xml:space="preserve">
+    <value>Dock position</value>
+  </data>
+  <data name="FLOATING_POSITION_LABEL" xml:space="preserve">
+    <value>Floating position (left, top, width, height)</value>
+  </data>
+  <data name="TRANSLATION_TARGET_LANGUAGE_LABEL" xml:space="preserve">
+    <value>Translation Target Language:</value>
+  </data>
+  <data name="ERROR_DURING_TRANSLATION" xml:space="preserve">
+    <value>An error has occured during the translation of text</value>
+  </data>
+  <data name="TRANSLATE" xml:space="preserve">
+    <value>Translate</value>
+  </data>
+  <data name="ENABLE_OVERRIDE_TRANSLATION_API_KEY_LABEL" xml:space="preserve">
+    <value>Use a different Yandex Translation API key?</value>
+  </data>
+  <data name="OVERRIDDEN_TRANSLATION_API_KEY_LABEL" xml:space="preserve">
+    <value>API Key:</value>
+  </data>
+  <data name="ENABLE_TRANSLATION_KEY_LABEL" xml:space="preserve">
+    <value>Enable translation key? (translation auto copied)</value>
+  </data>
+  <data name="TOBII_EYE_TRACKER_5" xml:space="preserve">
+    <value>Tobii Eye Tracker 5</value>
   </data>
 </root>

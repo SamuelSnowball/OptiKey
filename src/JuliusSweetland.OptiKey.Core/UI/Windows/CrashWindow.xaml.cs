@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2019 OPTIKEY LTD (UK company number 11854839) - All Rights Reserved
+﻿// Copyright (c) 2020 OPTIKEY LTD (UK company number 11854839) - All Rights Reserved
 using System;
 using System.Windows;
 using System.Windows.Threading;
@@ -21,6 +21,14 @@ namespace JuliusSweetland.OptiKey.UI.Windows
                 dt.Tick += (o, eventArgs) =>
                 {
                     this.Close();
+
+                    // The first crash might attempt a restart, but subsequent crashes shouldn't
+                    if (Settings.Default.AttemptRestartUponCrash && Settings.Default.CleanShutdown)
+                    {
+                        Settings.Default.CleanShutdown = false;
+                        Settings.Default.Save();
+                        OptiKeyApp.RestartApp();
+                    }
                 };
                 dt.Start();
             };

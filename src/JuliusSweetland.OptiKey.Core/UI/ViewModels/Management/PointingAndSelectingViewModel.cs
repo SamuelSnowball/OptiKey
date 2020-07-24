@@ -1,4 +1,4 @@
-// Copyright (c) 2019 OPTIKEY LTD (UK company number 11854839) - All Rights Reserved
+// Copyright (c) 2020 OPTIKEY LTD (UK company number 11854839) - All Rights Reserved
 using JuliusSweetland.OptiKey.Enums;
 using JuliusSweetland.OptiKey.Extensions;
 using JuliusSweetland.OptiKey.Models;
@@ -77,6 +77,7 @@ namespace JuliusSweetland.OptiKey.UI.ViewModels.Management
                     new KeyValuePair<string, PointsSources>(Enums.PointsSources.SteelseriesSentry.ToDescription(), Enums.PointsSources.SteelseriesSentry),
                     new KeyValuePair<string, PointsSources>(Enums.PointsSources.TheEyeTribe.ToDescription(), Enums.PointsSources.TheEyeTribe),
                     new KeyValuePair<string, PointsSources>(Enums.PointsSources.TobiiEyeTracker4C.ToDescription(), Enums.PointsSources.TobiiEyeTracker4C),
+                    new KeyValuePair<string, PointsSources>(Enums.PointsSources.TobiiEyeTracker5.ToDescription(), Enums.PointsSources.TobiiEyeTracker5),
                     new KeyValuePair<string, PointsSources>(Enums.PointsSources.TobiiEyeX.ToDescription(), Enums.PointsSources.TobiiEyeX),
                     new KeyValuePair<string, PointsSources>(Enums.PointsSources.TobiiPcEyeGo.ToDescription(), Enums.PointsSources.TobiiPcEyeGo),
                     new KeyValuePair<string, PointsSources>(Enums.PointsSources.TobiiPcEyeGoPlus.ToDescription(), Enums.PointsSources.TobiiPcEyeGoPlus),
@@ -203,6 +204,13 @@ namespace JuliusSweetland.OptiKey.UI.ViewModels.Management
         {
             get { return pointsMousePositionHideCursor; }
             set { SetProperty(ref pointsMousePositionHideCursor, value); }
+        }
+
+        private double pointTtlInMs;
+        public double PointTtlInMs
+        {
+            get { return pointTtlInMs; }
+            set { SetProperty(ref pointTtlInMs, value); }
         }
 
         private TriggerSources keySelectionTriggerSource;
@@ -375,6 +383,7 @@ namespace JuliusSweetland.OptiKey.UI.ViewModels.Management
                     || (Settings.Default.TobiiEyeXProcessingLevel != TobiiEyeXProcessingLevel && PointsSource == Enums.PointsSources.TobiiEyeX)
                     || (Settings.Default.IrisbondProcessingLevel != IrisbondProcessingLevel && PointsSource == Enums.PointsSources.IrisbondDuo)
                     || (Settings.Default.PointsMousePositionSampleInterval != TimeSpan.FromMilliseconds(PointsMousePositionSampleIntervalInMs) && PointsSource == Enums.PointsSources.MousePosition)
+                    || Settings.Default.PointTtl != TimeSpan.FromMilliseconds(PointTtlInMs)
                     || Settings.Default.KeySelectionTriggerSource != KeySelectionTriggerSource
                     || (Settings.Default.KeySelectionTriggerKeyboardKeyDownUpKey != KeySelectionTriggerKeyboardKeyDownUpKey && KeySelectionTriggerSource == Enums.TriggerSources.KeyboardKeyDownsUps)
                     || (Settings.Default.KeySelectionTriggerMouseDownUpButton != KeySelectionTriggerMouseDownUpButton && KeySelectionTriggerSource == Enums.TriggerSources.MouseButtonDownUps)
@@ -409,6 +418,7 @@ namespace JuliusSweetland.OptiKey.UI.ViewModels.Management
             KalmanFilterEnabled = Settings.Default.KalmanFilterEnabled;
             PointsMousePositionSampleIntervalInMs = Settings.Default.PointsMousePositionSampleInterval.TotalMilliseconds;
             PointsMousePositionHideCursor = Settings.Default.PointsMousePositionHideCursor;
+            PointTtlInMs = Settings.Default.PointTtl.TotalMilliseconds;
             KeySelectionTriggerSource = Settings.Default.KeySelectionTriggerSource;
             KeySelectionTriggerKeyboardKeyDownUpKey = Settings.Default.KeySelectionTriggerKeyboardKeyDownUpKey;
             KeySelectionTriggerMouseDownUpButton = Settings.Default.KeySelectionTriggerMouseDownUpButton;
@@ -441,6 +451,7 @@ namespace JuliusSweetland.OptiKey.UI.ViewModels.Management
             Settings.Default.KalmanFilterEnabled = KalmanFilterEnabled;
             Settings.Default.PointsMousePositionSampleInterval = TimeSpan.FromMilliseconds(PointsMousePositionSampleIntervalInMs);
             Settings.Default.PointsMousePositionHideCursor = PointsMousePositionHideCursor;
+            Settings.Default.PointTtl = TimeSpan.FromMilliseconds(PointTtlInMs);
             Settings.Default.KeySelectionTriggerSource = KeySelectionTriggerSource;
             Settings.Default.KeySelectionTriggerKeyboardKeyDownUpKey = KeySelectionTriggerKeyboardKeyDownUpKey;
             Settings.Default.KeySelectionTriggerMouseDownUpButton = KeySelectionTriggerMouseDownUpButton;
